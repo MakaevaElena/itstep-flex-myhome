@@ -6,6 +6,7 @@ body {
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
+    letter-spacing: 1px;
 }
 
 .block {
@@ -31,7 +32,7 @@ a:hover {
 /* first-block  */
 .first-block {
     backdrop-filter: grayscale(30%);
-    background-image: linear-gradient(to top, rgb(54, 54, 54, 0.6), rgb(68, 68, 68, 0.7)), url("./img/header-house.jpg");
+    background-image: linear-gradient(to top, rgb(54, 54, 54, 0.3), rgb(68, 68, 68, 0.7)), url("./img/header-house.jpg");
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -125,13 +126,19 @@ header {
 }
 
 .project h1,
-.scheme-block h1 {
+.scheme-block h1,
+.popular-block h1,
+.aboute-block h1,
+.benefits-block h1 {
     font-size: 3rem;
     color: rgb(85, 84, 84);
 }
 
 .project h2,
-.scheme-block h2 {
+.scheme-block h2,
+.popular-block h2,
+.aboute-block h2,
+.benefits-block h2 {
     position: relative;
     top: -50px;
 }
@@ -188,10 +195,15 @@ select {
 /* scheme-block */
 
 .scheme-block {
-    background-image: linear-gradient(to top, rgb(54, 54, 54, 0.8), rgb(68, 68, 68, 0.8)), url("./img/header-house.jpg");
+    background-image: linear-gradient(to top, rgb(54, 54, 54, 0.3), rgb(68, 68, 68, 0.8)), url("./img/header-house.jpg");
     background-size: cover;
     background-position: center;
     height: 30%;
+    padding: 5px;
+}
+
+.scheme-block h2 {
+    margin-left: 20px;
 }
 
 .scheme-block ul {
@@ -202,4 +214,78 @@ select {
 
 .scheme-block ul li {
     list-style-type: none;
+    position: relative;
+}
+
+.scheme-block span {
+    font-size: 64px;
+    color: rgb(121, 121, 121);
+}
+
+.scheme-block p {
+    letter-spacing: 1px;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+}
+
+/* popular-block */
+
+.house-gallery {
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.house-gallery .row img {
+    backdrop-filter: brightness(0.3);
+    width: 30px;
+    height: 50px;
+}
+
+.img-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-pagination li {
+    margin-left: 5px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* aboute-block */
+.aboute-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.aboute-block .text-about {
+    flex: 1 1 40%;
+}
+
+.aboute-block .img-about {
+    flex: 1 1 40%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.img-about img {
+    width: 100%;
+}
+
+/* benefits-block */
+
+.benefits-block .benefits {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.benefits img {
+    width: 50px;
 }
